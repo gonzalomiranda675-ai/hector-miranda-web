@@ -22,7 +22,7 @@ function ContactDialog() {
     const formData = new FormData(e.currentTarget);
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/gonzalomiranda675@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/hectormiranda536@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -147,8 +147,8 @@ function ContactDialog() {
               {error && (
                 <p className="text-sm text-destructive">
                   Hubo un error al enviar. Inténtelo nuevamente o escriba directamente a{" "}
-                  <a href="mailto:gonzalomiranda675@gmail.com" className="underline">
-                    gonzalomiranda675@gmail.com
+                  <a href="mailto:hectormiranda536@gmail.com" className="underline">
+                    hectormiranda536@gmail.com
                   </a>
                 </p>
               )}
@@ -207,11 +207,11 @@ export default function CTASection() {
         {/* Direct contact info */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-white/50 text-sm">
           <a
-            href="mailto:gonzalomiranda675@gmail.com"
+            href="mailto:hectormiranda536@gmail.com"
             className="inline-flex items-center gap-2 hover:text-brand-gold transition-colors"
           >
             <Mail className="h-4 w-4" />
-            <span>gonzalomiranda675@gmail.com</span>
+            <span>hectormiranda536@gmail.com</span>
           </a>
           <a
             href="tel:+51942367037"

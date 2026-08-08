@@ -27,11 +27,11 @@ export default function Footer() {
             {/* Contact */}
             <div className="space-y-2">
               <a
-                href="mailto:gonzalomiranda675@gmail.com"
+                href="mailto:hectormiranda536@gmail.com"
                 className="flex items-center gap-2 text-white/40 text-sm hover:text-brand-gold transition-colors"
               >
                 <Mail className="h-4 w-4 shrink-0" />
-                <span>gonzalomiranda675@gmail.com</span>
+                <span>hectormiranda536@gmail.com</span>
               </a>
               <a
                 href="tel:+51942367037"

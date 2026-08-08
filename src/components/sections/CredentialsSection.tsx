@@ -81,11 +81,11 @@ export default function CredentialsSection() {
         {/* Contact info bar */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
           <a
-            href="mailto:gonzalomiranda675@gmail.com"
+            href="mailto:hectormiranda536@gmail.com"
             className="inline-flex items-center gap-2 text-white/60 hover:text-brand-gold transition-colors text-sm"
           >
             <Mail className="h-4 w-4" />
-            <span>gonzalomiranda675@gmail.com</span>
+            <span>hectormiranda536@gmail.com</span>
           </a>
           <a
             href="tel:+51942367037"

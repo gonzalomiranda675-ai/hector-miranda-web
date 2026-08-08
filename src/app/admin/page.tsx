@@ -246,8 +246,8 @@ export default function AdminPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <p>Panel de administración · Héctor Miranda Strategic Advisory</p>
           <div className="flex items-center gap-4">
-            <a href="mailto:gonzalomiranda675@gmail.com" className="hover:text-foreground transition-colors">
-              gonzalomiranda675@gmail.com
+            <a href="mailto:hectormiranda536@gmail.com" className="hover:text-foreground transition-colors">
+              hectormiranda536@gmail.com
             </a>
             <a href="tel:+51942367037" className="hover:text-foreground transition-colors">
               +51 942 367 037
