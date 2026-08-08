@@ -30,11 +30,11 @@ export default function AboutSection() {
           <div className="lg:w-5/12 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/images/about-bg.png"
-                alt="Oficina ejecutiva con vista a la ciudad"
-                className="w-full h-[400px] sm:h-[480px] lg:h-[560px] object-cover"
+                src="/images/hector-about.jpg"
+                alt="Héctor Miranda — Advisor estratégico en activos inmobiliarios y sostenibilidad"
+                className="w-full h-[400px] sm:h-[480px] lg:h-[560px] object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-green-dark/20 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-green-dark/10 via-transparent to-transparent" />
             </div>
             {/* Decorative element */}
             <div className="absolute -bottom-4 -right-4 w-32 h-32 border-2 border-brand-gold/30 rounded-2xl -z-10" />
