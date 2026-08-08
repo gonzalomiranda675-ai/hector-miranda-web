@@ -160,6 +160,14 @@ export default function RootLayout({
               text: "Héctor Miranda es estratega en activos inmobiliarios, sostenibilidad y descarbonización con cerca de 20 años de experiencia en América Latina y participación en más de 200 proyectos LEED. Es fundador y ex CEO del Peru Green Building Council, primer GRESB AP del Perú, y ha participado en foros como APEC, World Green Building Council e ISCN.",
             },
           },
+          {
+            "@type": "Question",
+            name: "¿Qué diferencia existe entre la Consultoría Estratégica de Activos, Capital y Riesgo y una consultoría técnica tradicional?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "La consultoría técnica se concentra en diseñar, verificar o ejecutar una solución específica. La Consultoría Estratégica de Activos, Capital y Riesgo se concentra en la decisión del propietario, directorio o inversionista: qué riesgos considerar, qué evidencia falta, qué alternativas existen y cómo fortalecer la lógica de inversión o financiamiento antes de comprometer capital.",
+            },
+          },
         ],
       },
     ],
