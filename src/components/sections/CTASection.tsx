@@ -12,24 +12,31 @@ function ContactDialog() {
   const [open, setOpen] = useState(false);
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
+    setError(false);
 
     const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      organization: formData.get("organization") as string,
-      message: formData.get("message") as string,
-    };
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://formsubmit.co/ajax/gonzalomiranda675@gmail.com", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          organization: formData.get("organization") || "No especificada",
+          message: formData.get("message"),
+          _subject: "Nueva solicitud de contacto — Héctor Miranda Advisory",
+          _template: "table",
+          _captcha: "false",
+        }),
       });
 
       if (res.ok) {
@@ -37,10 +44,12 @@ function ContactDialog() {
         setTimeout(() => {
           setOpen(false);
           setSent(false);
-        }, 2000);
+        }, 2500);
+      } else {
+        setError(true);
       }
-    } catch (err) {
-      console.error("Error sending contact form:", err);
+    } catch {
+      setError(true);
     } finally {
       setSending(false);
     }
@@ -134,6 +143,15 @@ function ContactDialog() {
                   className="rounded-xl border-border/60 focus:border-brand-green resize-none"
                 />
               </div>
+
+              {error && (
+                <p className="text-sm text-destructive">
+                  Hubo un error al enviar. Inténtelo nuevamente o escriba directamente a{" "}
+                  <a href="mailto:gonzalomiranda675@gmail.com" className="underline">
+                    gonzalomiranda675@gmail.com
+                  </a>
+                </p>
+              )}
 
               <Button
                 type="submit"
