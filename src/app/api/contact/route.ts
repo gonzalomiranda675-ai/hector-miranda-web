@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { db } from "@/lib/db";
 
 export async function POST(request: Request) {
   try {
@@ -12,22 +13,38 @@ export async function POST(request: Request) {
       );
     }
 
-    // In production, this would send an email, save to database, or integrate with a CRM
-    console.log("Contact form submission:", {
-      name,
-      email,
-      organization: organization || "N/A",
-      message,
-      timestamp: new Date().toISOString(),
+    const submission = await db.contactSubmission.create({
+      data: {
+        name,
+        email,
+        organization: organization || null,
+        message,
+      },
     });
 
     return NextResponse.json({
       success: true,
       message: "Solicitud recibida correctamente",
+      id: submission.id,
     });
   } catch {
     return NextResponse.json(
       { error: "Error al procesar la solicitud" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function GET() {
+  try {
+    const submissions = await db.contactSubmission.findMany({
+      orderBy: { createdAt: "desc" },
+    });
+
+    return NextResponse.json(submissions);
+  } catch {
+    return NextResponse.json(
+      { error: "Error al obtener las solicitudes" },
       { status: 500 }
     );
   }
