@@ -1,6 +1,7 @@
 "use client";
 
 import { Separator } from "@/components/ui/separator";
+import { Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -20,9 +21,26 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <p className="text-white/40 text-sm leading-relaxed">
+            <p className="text-white/40 text-sm leading-relaxed mb-4">
               Consultoría estratégica de activos, capital y riesgo para directorios e inversionistas en América Latina.
             </p>
+            {/* Contact */}
+            <div className="space-y-2">
+              <a
+                href="mailto:gonzalomiranda675@gmail.com"
+                className="flex items-center gap-2 text-white/40 text-sm hover:text-brand-gold transition-colors"
+              >
+                <Mail className="h-4 w-4 shrink-0" />
+                <span>gonzalomiranda675@gmail.com</span>
+              </a>
+              <a
+                href="tel:+51942367037"
+                className="flex items-center gap-2 text-white/40 text-sm hover:text-brand-gold transition-colors"
+              >
+                <Phone className="h-4 w-4 shrink-0" />
+                <span>+51 942 367 037</span>
+              </a>
+            </div>
           </div>
 
           {/* Servicios */}
@@ -70,10 +88,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contacto */}
+          {/* Navegación */}
           <div>
             <h3 className="text-white/80 font-semibold text-sm mb-4 uppercase tracking-wider">
-              Contacto
+              Navegación
             </h3>
             <ul className="space-y-3">
               <li>

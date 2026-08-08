@@ -1,27 +1,6 @@
 "use client";
 
-const credentials = [
-  {
-    number: "~20",
-    label: "Años de experiencia",
-    detail: "en América Latina",
-  },
-  {
-    number: "200+",
-    label: "Proyectos LEED",
-    detail: "participación directa",
-  },
-  {
-    number: "1°",
-    label: "GRESB AP del Perú",
-    detail: "primer profesional certificado",
-  },
-  {
-    number: "CEO",
-    label: "Fundador Peru GBC",
-    detail: "ex CEO del council",
-  },
-];
+import { Mail, Phone } from "lucide-react";
 
 export default function CredentialsSection() {
   return (
@@ -56,24 +35,65 @@ export default function CredentialsSection() {
           </p>
         </div>
 
-        {/* Credentials grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {credentials.map((item, index) => (
+        {/* Credentials grid — 5 columns: photo + 4 metrics */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
+          {/* Photo card */}
+          <div className="flex flex-col items-center justify-center p-6 sm:p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
+            <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-brand-gold/40 mb-4 shadow-lg shadow-brand-gold/10">
+              <img
+                src="/images/hector-photo-card.jpg"
+                alt="Héctor Miranda - Asesor estratégico inmobiliario"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="font-serif text-white font-semibold text-base sm:text-lg text-center">
+              Héctor Miranda
+            </p>
+            <p className="text-white/50 text-xs sm:text-sm text-center mt-1">
+              Advisor estratégico independiente
+            </p>
+          </div>
+
+          {/* Metric cards — flex grow to match photo card height */}
+          {[
+            { number: "~20", label: "Años de experiencia", detail: "en América Latina" },
+            { number: "200+", label: "Proyectos LEED", detail: "participación directa" },
+            { number: "1°", label: "GRESB AP del Perú", detail: "primer profesional certificado" },
+            { number: "CEO", label: "Fundador Peru GBC", detail: "ex CEO del council" },
+          ].map((item, index) => (
             <div
               key={index}
-              className="group text-center p-6 sm:p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-500 backdrop-blur-sm"
+              className="flex flex-col items-center justify-center p-6 sm:p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-500 backdrop-blur-sm"
             >
               <div className="font-serif text-4xl sm:text-5xl font-bold text-brand-gold mb-3">
                 {item.number}
               </div>
-              <div className="text-white font-semibold text-base sm:text-lg mb-1">
+              <div className="text-white font-semibold text-base sm:text-lg mb-1 text-center">
                 {item.label}
               </div>
-              <div className="text-white/50 text-sm">
+              <div className="text-white/50 text-sm text-center">
                 {item.detail}
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Contact info bar */}
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+          <a
+            href="mailto:gonzalomiranda675@gmail.com"
+            className="inline-flex items-center gap-2 text-white/60 hover:text-brand-gold transition-colors text-sm"
+          >
+            <Mail className="h-4 w-4" />
+            <span>gonzalomiranda675@gmail.com</span>
+          </a>
+          <a
+            href="tel:+51942367037"
+            className="inline-flex items-center gap-2 text-white/60 hover:text-brand-gold transition-colors text-sm"
+          >
+            <Phone className="h-4 w-4" />
+            <span>+51 942 367 037</span>
+          </a>
         </div>
       </div>
     </section>

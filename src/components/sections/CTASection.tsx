@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -177,12 +177,32 @@ export default function CTASection() {
           Si su organización está evaluando una adquisición, un financiamiento o una decisión estratégica sobre activos reales, conversemos.
         </h2>
 
-        <p className="text-white/70 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+        <p className="text-white/70 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-8">
           La primera conversación es confidencial y sin compromiso. Permítame entender su contexto
           y explorar cómo puedo aportar valor a su decisión.
         </p>
 
-        <ContactDialog />
+        <div className="mb-8">
+          <ContactDialog />
+        </div>
+
+        {/* Direct contact info */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-white/50 text-sm">
+          <a
+            href="mailto:gonzalomiranda675@gmail.com"
+            className="inline-flex items-center gap-2 hover:text-brand-gold transition-colors"
+          >
+            <Mail className="h-4 w-4" />
+            <span>gonzalomiranda675@gmail.com</span>
+          </a>
+          <a
+            href="tel:+51942367037"
+            className="inline-flex items-center gap-2 hover:text-brand-gold transition-colors"
+          >
+            <Phone className="h-4 w-4" />
+            <span>+51 942 367 037</span>
+          </a>
+        </div>
       </div>
     </section>
   );
