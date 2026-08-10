@@ -55,7 +55,7 @@ const services = [
     features: [
       "Mapeo de exposición climática por activo — Asset Climate Exposure Map",
       "Evaluación de evidencia operacional y brechas críticas — Evidence Sufficiency Matrix",
-      "Roadmap de CAPEX para readiness climático — Climate & Performance CAPEX Roadmap",
+      "Hoja de ruta de CAPEX para preparación climática — Climate & Performance CAPEX Roadmap",
       "Sesión ejecutiva de 60–90 minutos con CEO, CFO y Comité de Inversiones",
     ],
     deliverables: [
@@ -68,6 +68,7 @@ const services = [
     ],
     image: "/images/service-niif-readiness.png",
     tag: "Pre-divulgación",
+    cta: "Solicitar una conversación ejecutiva",
   },
 ];
 
@@ -174,7 +175,7 @@ export default function ServicesSection() {
                       }}
                       className="inline-flex items-center gap-2 text-brand-green font-medium text-sm hover:gap-3 transition-all duration-300 group/link"
                     >
-                      Consultar sobre este servicio
+                      {service.cta || "Consultar sobre este servicio"}
                       <ArrowUpRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                     </button>
                   </div>
