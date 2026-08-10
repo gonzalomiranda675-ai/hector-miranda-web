@@ -109,6 +109,7 @@ export default function RootLayout({
           "Due Diligence Verde para Adquisiciones Inmobiliarias",
           "Preparación de Activos para Financiamiento Verde",
           "Reformulación Estratégica de Proyectos para Financiamiento Verde",
+          "NIIF S1/S2 — Asset & CAPEX Readiness",
         ],
         areaServed: "América Latina",
         provider: {

@@ -46,6 +46,20 @@ const services = [
     image: "/images/service-reformulation.png",
     tag: "Reformulación",
   },
+  {
+    id: "niif-readiness",
+    title: "NIIF S1/S2 — Asset & CAPEX Readiness",
+    description:
+      "Diagnóstico ejecutivo independiente que conecta activos físicos, riesgo climático, desempeño operacional, evidencia disponible y decisiones de capital antes de la divulgación NIIF S1/S2.",
+    features: [
+      "Mapeo de exposición climática por activo",
+      "Evaluación de evidencia operacional y brechas críticas",
+      "Roadmap de CAPEX para readiness climático",
+      "Sesión ejecutiva con CEO, CFO y Comité de Inversiones",
+    ],
+    image: "/images/service-niif-readiness.png",
+    tag: "Pre-divulgación",
+  },
 ];
 
 export default function ServicesSection() {
@@ -62,7 +76,7 @@ export default function ServicesSection() {
             <div className="w-8 h-px bg-brand-gold" />
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Tres formas de proteger y potenciar su inversión
+            Cuatro formas de proteger y potenciar su inversión
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
             Cada servicio está diseñado para intervenir en un momento específico
