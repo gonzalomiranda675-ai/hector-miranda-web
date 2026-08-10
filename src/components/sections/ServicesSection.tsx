@@ -50,12 +50,21 @@ const services = [
     id: "niif-readiness",
     title: "NIIF S1/S2 — Asset & CAPEX Readiness",
     description:
-      "Diagnóstico ejecutivo independiente que conecta activos físicos, riesgo climático, desempeño operacional, evidencia disponible y decisiones de capital antes de la divulgación NIIF S1/S2.",
+      "Diagnóstico ejecutivo independiente que conecta activos físicos, riesgo climático, desempeño operacional, evidencia disponible y decisiones de capital antes de la divulgación NIIF S1/S2. No sustituye la preparación contable ni legal del reporte — su función es responder, antes de llegar al reporte, qué puede demostrar realmente el portafolio.",
+    quote: "Nosotros no elaboramos su reporte NIIF S1/S2. Determinamos si sus edificios pueden sostenerlo y qué decisiones de CAPEX debería conocer antes de llegar al reporte.",
     features: [
-      "Mapeo de exposición climática por activo",
-      "Evaluación de evidencia operacional y brechas críticas",
-      "Roadmap de CAPEX para readiness climático",
-      "Sesión ejecutiva con CEO, CFO y Comité de Inversiones",
+      "Mapeo de exposición climática por activo — Asset Climate Exposure Map",
+      "Evaluación de evidencia operacional y brechas críticas — Evidence Sufficiency Matrix",
+      "Roadmap de CAPEX para readiness climático — Climate & Performance CAPEX Roadmap",
+      "Sesión ejecutiva de 60–90 minutos con CEO, CFO y Comité de Inversiones",
+    ],
+    deliverables: [
+      "Asset & Climate Exposure Map",
+      "Evidence Sufficiency Matrix",
+      "CAPEX Readiness Roadmap",
+      "Disclosure Evidence Gap Register",
+      "Executive Decision Memo",
+      "Sesión ejecutiva con C-suite",
     ],
     image: "/images/service-niif-readiness.png",
     tag: "Pre-divulgación",
@@ -116,6 +125,16 @@ export default function ServicesSection() {
                     {service.description}
                   </p>
 
+                  {/* Differentiator quote (NIIF service only) */}
+                  {service.quote && (
+                    <div className="relative mb-6 pl-5 py-1">
+                      <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-brand-gold rounded-full" />
+                      <blockquote className="font-serif text-base sm:text-lg text-foreground italic leading-relaxed">
+                        &ldquo;{service.quote}&rdquo;
+                      </blockquote>
+                    </div>
+                  )}
+
                   {/* Features list */}
                   <ul className="space-y-3 mb-8">
                     {service.features.map((feature, fIndex) => (
@@ -127,6 +146,25 @@ export default function ServicesSection() {
                       </li>
                     ))}
                   </ul>
+
+                  {/* Deliverables (NIIF service only) */}
+                  {service.deliverables && (
+                    <div className="mb-8">
+                      <p className="text-xs font-semibold text-brand-green tracking-widest uppercase mb-3">
+                        Entregables
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {service.deliverables.map((deliverable, dIndex) => (
+                          <span
+                            key={dIndex}
+                            className="inline-flex items-center px-3 py-1.5 rounded-full bg-brand-green/5 border border-brand-green/15 text-xs font-medium text-brand-green"
+                          >
+                            {deliverable}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   <div>
                     <button
